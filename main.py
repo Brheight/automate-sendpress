@@ -24,8 +24,8 @@ def word_press():
     chrome = webdriver.Chrome(executable_path=os.path.abspath("/home/ben/anaconda3/bin/chromedriver"),   chrome_options=chrome_options)
    #'C:/Users/Ben/AppData/Local/Programs/Python/Python37-32/Scripts/chromedriver.exe')
     chrome.get(marketing) #'https://mcscglobal.org/wp-admin/admin.php?page=sp-emails&view=edit&emailID=754')
-    chrome.find_element_by_id("user_login").send_keys('admin@mcscglobal.org')
-    chrome.find_element_by_id("user_pass").send_keys('plug4we(re)we21@')
+    chrome.find_element_by_id("user_login").send_keys(username)
+    chrome.find_element_by_id("user_pass").send_keys(password)
     chrome.find_element_by_id("user_pass").send_keys(Keys.RETURN)
     return chrome
 
